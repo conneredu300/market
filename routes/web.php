@@ -41,7 +41,7 @@ Route::post('/categories/update/{category}','CategoryController@updateCategoryPo
 
 Route::get('/products','ProductController@getAll')->name('products');
 
-Route::get('/products/add','ProductController@addProductGet');
+Route::get('/products/add','ProductController@addProductGet')->name('productsAdd');
 
 Route::post('/products/add','ProductController@addProductPost');
 

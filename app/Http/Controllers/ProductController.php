@@ -26,6 +26,14 @@ class ProductController extends Controller
     {
         $product = new Product();
 
+        $dados = $request->all();
+
+        $validator = validator($dados, $product->rules, $product->messages);
+
+        if($validator->fails()){
+            return redirect()->route('productsAdd')->withErrors($validator);
+        }
+
         $product->name = $request->name;
 
         $product->quantity = $request->quantity;

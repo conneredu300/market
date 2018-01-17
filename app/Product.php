@@ -27,4 +27,22 @@ class Product extends Model
             'orders',
             'product_id');
     }
+
+    public $rules = [
+        'name' => 'required',
+        'quantity' => 'required',
+        'image' => 'required',
+        'description' => 'required',
+        'price' => 'required',
+        'categories' => 'required'
+    ];
+
+    public $messages = [
+        'name.required' => 'Campo obrigatório!',
+        'quantity.required' => 'Campo obrigatório!',
+        'image.required' => 'Campo obrigatório!',
+        'description.required' => 'Campo obrigatório!',
+        'price.required' => 'Campo obrigatório!',
+        'categories.required' => 'Campo obrigatório!'
+    ];
 }

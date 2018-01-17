@@ -16,6 +16,7 @@
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label class="control-label bold">Adicionar Categoria</label>
+
                     <div class="input-group">
                         <span for="name">Categoria</span>
                         <input type="Text" class="form-control" name="name">
