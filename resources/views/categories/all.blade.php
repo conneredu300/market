@@ -9,18 +9,18 @@
 @endsection
 
 @section('content')
-    <h1 class="text-center">Categories</h1>
+    <h1 class="text-center">Categorias</h1>
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-12 col-md-offset-12">
             <form action="categories/add" method="POST">
                 {{ csrf_field() }}
                 <div class="form-group">
-                    <label class="control-label bold">Add Category</label>
+                    <label class="control-label bold">Adicionar Categoria</label>
                     <div class="input-group">
-                        <span class="input-group-addon bold">Category</span>
+                        <span for="name">Categoria</span>
                         <input type="Text" class="form-control" name="name">
                         <span class="input-group-btn">
-                   <button class="btn btn-primary" type="Submit">Add</button>
+                   <button class="btn btn-primary" type="Submit">Adicionar</button>
                 </span>
                     </div>
                 </div>
@@ -28,9 +28,9 @@
             <table class="table table-bordered ">
                 <thead>
                 <tr class="danger">
-                    <th class="text-center">Id</th>
-                    <th class="text-center">Name</th>
-                    <th class="text-center">Action</th>
+                    <th class="text-center">Código</th>
+                    <th class="text-center">Nome</th>
+                    <th class="text-center">Ações</th>
                 </tr>
                 </thead>
                 <tbody>
