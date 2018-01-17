@@ -10,8 +10,7 @@
 @endsection
 
 @section('content')
-    <h1 class="text-center">CodeLab Market</h1>
-    <h3 class="text-center">CMS CodeLab Market To Manage Orders</h3>
+    <h1 class="text-center">Market</h1>
     <p class="lead">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Corporis et expedita explicabo illum laboriosam mollitia,

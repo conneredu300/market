@@ -30,6 +30,12 @@ class ProductController extends Controller
 
         $product->quantity = $request->quantity;
 
+        $product->image = $request->image;
+
+        $product->description = $request->description;
+
+        $product->price = $request->price;
+
         $product->category_id = $request->categories;
 
         $product->save();

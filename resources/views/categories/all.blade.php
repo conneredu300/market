@@ -39,9 +39,9 @@
                         <td>{{ $category->id }}</td>
                         <td>{{ $category->name }}</td>
                         <td>
-                            <a class="btn btn-danger" href="/categories/delete/{{ $category->id }}">Delete</a>
-                            <a class="btn btn-primary" href="/categories/update/{{ $category->id }}">Update</a>
-                            <a class="btn btn-warning" href="/categories/{{ $category->id }}">Products</a>
+                            <a class="btn btn-danger" href="/categories/delete/{{ $category->id }}">Apagar</a>
+                            <a class="btn btn-primary" href="/categories/update/{{ $category->id }}">Atualizar</a>
+                            <a class="btn btn-warning" href="/categories/{{ $category->id }}">Ver</a>
                         </td>
                     </tr>
                 @endforeach

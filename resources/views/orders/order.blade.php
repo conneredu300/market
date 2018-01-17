@@ -2,7 +2,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Customer Order
+    Pedidos no carrinho
 @endsection
 
 @section('orders')
@@ -10,13 +10,13 @@
 @endsection
 
 @section('content')
-    <h1 class="text-center">Order</h1>
+    <h1 class="text-center">Pedidos</h1>
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-12 col-md-offset-12">
             <table class="table table-bordered ">
                 <thead>
                 <tr class="info">
-                    <th class="text-center">Product Item</th>
+                    <th class="text-center">Ítem</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -28,7 +28,7 @@
                 </tbody>
             </table>
             <div class="text-center">
-                <a href="/orders" class="btn btn-primary">Back To List</a>
+                <a href="{{ route('orders') }}" class="btn btn-primary">Voltar ao carrinho</a>
             </div>
 
         </div>

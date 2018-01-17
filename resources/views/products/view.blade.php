@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    View Product
+    Produto
 @endsection
 
 @section('products')
@@ -9,18 +9,24 @@
 @endsection
 
 @section('content')
-    <h1 class="text-center">View "{{ $product->name }}"</h1>
+    <h1 class="text-center">"{{ $product->name }}"</h1>
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-                <div class="form-group text-center">
-                    <h2>Quantity : {{ $product->quantity }}</h2>
-                </div>
-                <div class="form-group text-center">
-                    <h2>Category : {{ $product->category->name }}</h2>
-                </div>
-                <div class="form-group text-center">
-                        <a href="/products" class="btn btn-info">Back To List</a>
-                </div>
+        <div class="col-md-12 col-md-offset-12">
+            <div class="form-group text-center">
+                <h2>Foto: <img src='{{ $product->image }}'></h2>
+            </div>
+            <div class="form-group text-center">
+                <h2>Preço: {{ $product->price }}</h2>
+            </div>
+            <div class="form-group text-center">
+                <h2>Quantidade: {{ $product->quantity }}</h2>
+            </div>
+            <div class="form-group text-center">
+                <h2>Categoria : {{ $product->category->name }}</h2>
+            </div>
+            <div class="form-group text-center">
+                <a href="{{ route('products') }}" class="btn btn-info">Voltar a listagem</a>
+            </div>
         </div>
     </div>
 @endsection

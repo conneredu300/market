@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * @property mixed name
  * @property mixed quantity
+ * @property mixed image
+ * @property mixed description
+ * @property mixed price
  * @property mixed category_id
  */
 class Product extends Model

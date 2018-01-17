@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Update Customer
+    Atualizar Clientes
 @endsection
 
 @section('customers')
@@ -9,10 +9,10 @@
 @endsection
 
 @section('content')
-    <h1 class="text-center">Update <span class="maroon">"{{ $customer->name }}"</span></h1>
+    <h1 class="text-center">Atualizar <span class="maroon">"{{ $customer->name }}"</span></h1>
     <h4 class="text-center"></h4>
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-12 col-md-offset-12">
             <form method="POST">
                 {{ csrf_field() }}
                 <div class="form-group">
@@ -27,8 +27,8 @@
                 </div>
                 <div class="form-group">
                     <div class="text-center">
-                        <a href="/customers" class="btn btn-info">Back To List</a>
-                        <button class="btn btn-primary" type="Submit">Update</button>
+                        <a href="{{ route('customers') }}" class="btn btn-info">Voltar a listagem</a>
+                        <button class="btn btn-primary" type="Submit">Atualizar</button>
                     </div>
                 </div>
             </form>

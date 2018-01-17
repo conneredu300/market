@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Orders
+    Carrinho
 @endsection
 
 @section('orders')
@@ -9,13 +9,13 @@
 @endsection
 
 @section('content')
-    <h1 class="text-center">Orders</h1>
+    <h1 class="text-center">Carrinho</h1>
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-12 col-md-offset-12">
             <form class="form-horizontal" action="/orders/add" method="POST">
                 {{ csrf_field() }}
                 <fieldset>
-                    <legend>Add Order</legend>
+                    <legend>Adicionar ao carrinho</legend>
                     <div class="col-md-12">
                         <div class="col-md-4">
                             <select name="customers" class="form-control">
@@ -32,7 +32,7 @@
                             </select>
                         </div>
                         <div class="col-md-4">
-                            <button type="Submit" class="btn btn-primary">Submit</button>
+                            <button type="Submit" class="btn btn-primary">Adicionar ao carrinho</button>
                         </div>
                     </div>
                 </fieldset>
@@ -43,8 +43,8 @@
             <table class="table table-bordered ">
                 <thead>
                 <tr class="warning">
-                    <th class="text-center">Name</th>
-                    <th class="text-center">Action</th>
+                    <th class="text-center">Nome</th>
+                    <th class="text-center">Ações</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -52,7 +52,7 @@
                     <tr class="text-center bold">
                         <td>{{ $customers->name }}</td>
                         <td>
-                            <a class="btn btn-primary" href="/orders/{{ $customers->id }}">View Customer Order</a>
+                            <a class="btn btn-primary" href="/orders/{{ $customers->id }}">Ver pedidos</a>
                         </td>
                     </tr>
                 @endforeach

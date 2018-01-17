@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Update Customer
+    Visualização
 @endsection
 
 @section('customers')
@@ -9,26 +9,26 @@
 @endsection
 
 @section('content')
-    <h1 class="text-center">View <span class="maroon">"{{ $customer->name }}"</span></h1>
+    <h1 class="text-center"><span class="maroon">"{{ $customer->name }}"</span></h1>
     <h4 class="text-center"></h4>
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-12 col-md-offset-12">
 
                     <div class="text-center">
                         <h4>
-                            <span class="maroon bold">Email : </span>
+                            <span class="maroon bold">E-mail : </span>
                             {{ $customer->email }}
                         </h4>
                         <h4>
-                            <span class="maroon bold">Created At : </span>
+                            <span class="maroon bold">Data de criação : </span>
                             {{ $customer->created_at }}
                         </h4>
                         <h4>
-                            <span class="maroon bold">Updated At : </span>
+                            <span class="maroon bold">Data de atualização : </span>
                             {{ $customer->updated_at }}
                         </h4>
                           <div class="text-center">
-                              <a href="/customers" class="btn btn-info">Back To List</a>
+                              <a href="{{ route('customers') }}" class="btn btn-info">Voltar a listagem</a>
                           </div>
                     </div>
         </div>
