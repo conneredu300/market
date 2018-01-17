@@ -30,7 +30,11 @@ class ProductController extends Controller
 
         $product->quantity = $request->quantity;
 
-        $product->image = $request->image;
+        if ($request->hasFile('image')) {
+            $request->file('image')->store('public/images');
+
+            $product->image = $request->file('image')->hashName();
+        }
 
         $product->description = $request->description;
 

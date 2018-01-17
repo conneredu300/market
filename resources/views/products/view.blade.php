@@ -13,7 +13,7 @@
     <div class="row">
         <div class="col-md-12 col-md-offset-12">
             <div class="form-group text-center">
-                <h2>Foto: <img src='{{ $product->image }}'></h2>
+                <img src="{{ asset('public/images/' . $product->image) }}">
             </div>
             <div class="form-group text-center">
                 <h2>Preço: {{ $product->price }}</h2>

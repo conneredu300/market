@@ -12,7 +12,7 @@
     <h1 class="text-center">Produtos</h1>
     <div class="row">
         <div class="col-md-12 col-md-offset-12">
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
             {{ csrf_field() }}
             <div class="form-group">
                 <input type="Text" name="name" class="form-control" placeholder="Nome">
